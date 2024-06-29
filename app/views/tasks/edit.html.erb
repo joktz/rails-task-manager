@@ -1,0 +1,17 @@
+<div class="container">
+<h1> Edit Task </h1>
+
+  <%= form_with model: @task do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :details %>
+    <%= f.text_field :details %>
+    <%= f.label :completed do %>
+      <%= f.check_box :completed %>
+        Mark as Completed
+    <% end %>
+    <%= f.submit %>
+  <% end %>
+
+<p class="border-top p-3"><%= link_to "Back to list", tasks_path %></p>
+</div>
